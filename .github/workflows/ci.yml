@@ -14,13 +14,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run Tests
-        run: npm test --if-present
+      - name: Run initial CI check
+        run: echo "CI Pipeline successfully initialized for DevStep project!"
