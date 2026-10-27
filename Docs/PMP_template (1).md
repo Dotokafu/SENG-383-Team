@@ -20,16 +20,16 @@
 ### Project and Jira Setup
 
 **Project in one sentence:**  
-**Jira project key:**  
-**Jira board link:**  
+**Jira project key: S3P**  
+**Jira board link: https://dotokafu.atlassian.net/jira/software/projects/S3P/boards/1?filter=&groupBy=none**  
 
 ### Team and Roles
 
 | Name | Jira / GitHub username | Role |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+|Unay Senocak | Dotokafu/Dotokafu|Developer|
+|Asel Ece Buyukbas | /aseleceb|Tester|
+|Ayse Sena Unver| /senanvr|Developer/Project Manager|
 | | | |
 | | | |
 
