@@ -19,17 +19,19 @@
 
 ### Project and Jira Setup
 
-**Project in one sentence:**  
-**Jira project key: S3P**  
-**Jira board link: https://dotokafu.atlassian.net/jira/software/projects/S3P/boards/1?filter=&groupBy=none**  
+**Project in one sentence:**  AI-assisted child development tracking for parents, kids, and specialists.
+
+**Jira project key:** S3P 
+
+**Jira board link:** https://dotokafu.atlassian.net/jira/software/projects/S3P/boards/1?filter=&groupBy=none 
 
 ### Team and Roles
 
 | Name | Jira / GitHub username | Role |
 |---|---|---|
-|Unay Senocak | Dotokafu/Dotokafu|Developer|
-|Asel Ece Buyukbas | /aseleceb|Tester|
-|Ayse Sena Unver| /senanvr|Developer/Project Manager|
+|Unay Şenocak | Dotokafu/Dotokafu|Developer|
+|Asel Ece Birlikbaş| /aseleceb|Tester|
+|Ayşe Sena Ünver| /senanvr|Developer/Project Manager|
 | | | |
 | | | |
 
@@ -43,14 +45,14 @@
 
 | Epic | Owner | Number of tasks | Planned sprint(s) |
 |---|---|---|---|
-| M1 | | | |
-| M2 | | | |
-| M3 | | | |
-| M4 | | | |
-| M5 | | | |
-| M6 | | | |
-| M7 | | | |
-| M8 | | | |
+| M1: Login and Roles | |5|Sprint 1 ,Sprint 2|
+| M2: Linking Specialists | |4|Sprint 2|
+| M3: Weekly Schedule | |4|Sprint 2|
+| M4: Tasks | |5|Sprint 2|
+| M5: Specialist entries| |4|Sprint 3|
+| M6: Documents | |4|Sprint 3|
+| M7: Weekly statics | |4| Sprint 3|
+| M8: Role-based AI summary | |5|Sprint 3|
 
 ### Sprint Plan
 
@@ -58,10 +60,10 @@
 
 | Sprint | Weeks | Sprint goal | Ends with |
 |---|---|---|---|
-| Sprint 1 | | | Walking skeleton (v0.0), Week 6 |
-| Sprint 2 | | | Release v0.1, mid-term |
-| Sprint 3 | | | Release v0.2, Week 10 |
-| Sprint 4 | | | Release v1.0, final |
+| Sprint 1 |Weeks 4-6|Complete SRS, SDD,PMP-1 & PMP-2 and build walking skeleton | Walking skeleton (v0.0), Week 6 |
+| Sprint 2 |Weeks 7-8|Implement M1-M4 features,complete PMP-3 and run first E2E test in CI| Release v0.1, mid-term |
+| Sprint 3 |Weeks 9-10|Implement M5-M8 features,complete PMP-4 3 E2E tests| Release v0.2, Week 10 |
+| Sprint 4 |Weeks 11-12|Complete E2E tests for all M1-M8,final report,PMP-5 & PMP-6| Release v1.0, final |
 
 ---
 
