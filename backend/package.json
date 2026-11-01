@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "seed": "node src/seed.js",
-    "test": "jest --coverage --passWithNoTests"
+    "test": "jest --coverage --passWithNoTests",
+    "start": "node src/server.js",
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "better-sqlite3": "^13.0.3",
     "cors": "^2.8.6",
     "express": "^5.3.0"
