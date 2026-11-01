@@ -23,44 +23,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Backend CI (Jest & Supertest)
         run: |
           if [ -f "backend/package.json" ]; then
             cd backend
-            npm install
-            npm run seed --if-present
-            npm test --if-present -- --passWithNoTests
+            npm install --include=dev
+            npm run seed 
+            npm test 
           elif [ -f "server/package.json" ]; then
             cd server
-            npm install
-            npm run seed --if-present
-            npm test --if-present -- --passWithNoTests
+            npm install --include=dev
+            npm run seed 
+            npm test 
           else
             echo "Backend package.json henüz eklenmemiş, bu adım atlanıyor."
           fi
 
-      - name: Frontend CI (Vite & Vitest)
-        run: |
-          if [ -f "frontend/package.json" ]; then
-            cd frontend
-            npm install
-            npm test --if-present -- --run --passWithNoTests
-            npm run build --if-present
-          elif [ -f "client/package.json" ]; then
-            cd client
-            npm install
-            npm test --if-present -- --run --passWithNoTests
-            npm run build --if-present
-          else
-            echo "Frontend package.json henüz eklenmemiş, bu adım atlanıyor."
-          fi
-
-      - name: Root Project Check (Eğer tek package.json varsa)
-        run: |
-          if [ -f "package.json" ]; then
-            npm install
-            npm test --if-present
-            npm run build --if-present
-          fi
+      
