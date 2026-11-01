@@ -6,7 +6,7 @@
   "scripts": {
     "seed": "node src/seed.js",
     "test": "jest --coverage --passWithNoTests",
-    "start": "node src/server.js",
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
