@@ -1,30 +1,36 @@
-import { useEffect, useState } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { useAuth } from './auth/authContext'
+import { homePathFor } from './auth/roles'
+import ProtectedRoute from './components/ProtectedRoute'
+import LoginPage from './pages/LoginPage'
+import ParentHome from './pages/ParentHome'
+import SpecialistHome from './pages/SpecialistHome'
+import ChildHome from './pages/ChildHome'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+function RootRedirect() {
+  const { user, loading } = useAuth()
 
-function App() {
-  const [health, setHealth] = useState(null)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    fetch(`${API_URL}/api/health`)
-      .then((res) => res.json())
-      .then(setHealth)
-      .catch(() => setError('Backend is not reachable'))
-  }, [])
-
-  return (
-    <div style={{ padding: 24 }}>
-      <h1>StepTrack</h1>
-      {error && <p>{error}</p>}
-      {!error && !health && <p>Checking backend...</p>}
-      {health && (
-        <p>
-          Backend: {health.status} / Database: {health.database}
-        </p>
-      )}
-    </div>
-  )
+  if (loading) return <p style={{ padding: 24 }}>Loading...</p>
+  return <Navigate to={user ? homePathFor(user.role) : '/login'} replace />
 }
 
-export default App
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<RootRedirect />} />
+      <Route path="/login" element={<LoginPage />} />
+
+      <Route path="/parent" element={<ProtectedRoute roles={['parent']} />}>
+        <Route index element={<ParentHome />} />
+      </Route>
+      <Route path="/specialist" element={<ProtectedRoute roles={['specialist']} />}>
+        <Route index element={<SpecialistHome />} />
+      </Route>
+      <Route path="/child" element={<ProtectedRoute roles={['child']} />}>
+        <Route index element={<ChildHome />} />
+      </Route>
+
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  )
+}
