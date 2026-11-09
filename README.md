@@ -69,7 +69,7 @@ cd frontend
 npm run dev
 ```
 
-6. Open [http://localhost:5173](http://localhost:5173) in the browser. The page should show `Backend: ok / Database: connected`.
+6. Open [http://localhost:5173](http://localhost:5173) in the browser. You should see the login page; log in with one of the demo accounts above (for example `parent1@example.com`). Under the form the page shows `Backend: ok / Database: connected`.
 
 You can also check the API directly at [http://localhost:3001/api/health](http://localhost:3001/api/health).
 
