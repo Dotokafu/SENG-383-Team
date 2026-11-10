@@ -4,6 +4,7 @@ import { useChildren } from '../hooks/useChildren'
 import { useTasks } from '../hooks/useTasks'
 import AssignTaskForm from './AssignTaskForm'
 import TaskStatusList from './TaskStatusList'
+import WeeklyCalendar from './WeeklyCalendar'
 import './tasks.css'
 
 // Used on the parent dashboard and on the specialist page: choose a child,
@@ -50,6 +51,7 @@ export default function ChildTasksPanel() {
       )}
 
       <AssignTaskForm childId={childId} onCreated={() => setRefreshKey((key) => key + 1)} />
+      <WeeklyCalendar childId={childId} />
       <TaskStatusList
         tasks={tasks}
         currentUserId={user.id}
