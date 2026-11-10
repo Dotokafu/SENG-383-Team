@@ -5,6 +5,7 @@ const authRouter = require('./routes/auth');
 const childrenRouter = require('./routes/children');
 const errorHandler = require('./middleware/errorHandler');
 const tasksRouter = require('./routes/tasks');
+const eventsRouter = require('./routes/events');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use('/api/health', healthRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/children', childrenRouter);
 app.use('/api', tasksRouter);
+app.use('/api', eventsRouter);
 
 app.use(errorHandler);
 
