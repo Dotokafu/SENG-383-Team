@@ -10,4 +10,10 @@ function findById(id) {
   return db.prepare('SELECT id, name, email, role FROM users WHERE id = ?').get(id);
 }
 
-module.exports = { findByEmail, findById };
+function findSpecialistByEmail(email) {
+  return db
+    .prepare("SELECT id, name, email FROM users WHERE email = ? AND role = 'specialist'")
+    .get(email);
+}
+
+module.exports = { findByEmail, findById, findSpecialistByEmail };
