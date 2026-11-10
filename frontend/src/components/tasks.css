@@ -1,0 +1,108 @@
+.tasks-panel,
+.child-tasks {
+  text-align: left;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.tasks-panel h3,
+.child-tasks h3 {
+  color: var(--text-h);
+  font-weight: 500;
+  margin: 24px 0 8px;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.task-form h3 {
+  margin: 0;
+}
+
+.task-form .field,
+.child-select {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 15px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.child-select select {
+  font: inherit;
+  padding: 6px 8px;
+}
+
+.task-form button {
+  align-self: flex-start;
+}
+
+.inline-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.form-error {
+  color: crimson;
+}
+
+.form-success {
+  color: seagreen;
+}
+
+.task-list table,
+.child-tasks table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.task-list th,
+.task-list td,
+.child-tasks th,
+.child-tasks td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.task-list td,
+.child-tasks td {
+  color: var(--text-h);
+}
+
+.task-description {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+}
+
+.badge-open {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+
+.badge-done {
+  background: rgba(46, 139, 87, 0.15);
+  border-color: rgba(46, 139, 87, 0.5);
+}
