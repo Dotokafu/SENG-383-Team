@@ -4,6 +4,7 @@ import { homePathFor } from './auth/roles'
 import ProtectedRoute from './components/ProtectedRoute'
 import LoginPage from './pages/LoginPage'
 import ParentHome from './pages/ParentHome'
+import LinkedSpecialistsPage from './pages/LinkedSpecialistsPage'
 import SpecialistHome from './pages/SpecialistHome'
 import ChildHome from './pages/ChildHome'
 
@@ -22,6 +23,7 @@ export default function App() {
 
       <Route path="/parent" element={<ProtectedRoute roles={['parent']} />}>
         <Route index element={<ParentHome />} />
+        <Route path="specialists" element={<LinkedSpecialistsPage />} />
       </Route>
       <Route path="/specialist" element={<ProtectedRoute roles={['specialist']} />}>
         <Route index element={<SpecialistHome />} />
