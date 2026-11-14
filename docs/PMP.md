@@ -1,8 +1,6 @@
 # Project Management Plan (PMP)
 
-> The purpose of this PMP is to practice planning and tracking work in Jira. Keep it short: most of the content is a summary of what you set up in Jira.
-> Keep this file at `docs/PMP.md`. Each section is one Jira epic (PMP-1 … PMP-6); mark the epic Done when the section is complete.
-> Save screenshots in `docs/img/`.
+
 
 | Section | Content | Required by |
 |---|---|---|
@@ -30,10 +28,8 @@
 | Name | Jira / GitHub username | Role |
 |---|---|---|
 |Unay Şenocak | Dotokafu/Dotokafu|Developer|
-|Asel Ece Birlikbaş| /aseleceb|Tester|
-|Ayşe Sena Ünver| /senanvr|Developer/Project Manager|
-| | | |
-| | | |
+|Asel Ece Birlikbaş| Asel Ece Birlikbaş/aseleceb|Tester|
+|Ayşe Sena Ünver| Ayşe Sena Ünver/senanvr|Developer/Project Manager|
 
 ---
 
@@ -41,22 +37,22 @@
 
 ### Work Packages (Epics)
 
-> One row per Jira epic. Number of tasks = how many tasks you created under that epic.
+
 
 | Epic | Owner | Number of tasks | Planned sprint(s) |
 |---|---|---|---|
-| M1: Login and Roles | |5|Sprint 1 ,Sprint 2|
-| M2: Linking Specialists | |4|Sprint 2|
-| M3: Weekly Schedule | |4|Sprint 2|
-| M4: Tasks | |5|Sprint 2|
+| M1: Login and Roles |Ayşe Sena Ünver|5|Sprint 1 ,Sprint 2|
+| M2: Linking Specialists |Ayşe Sena Ünver|4|Sprint 2|
+| M3: Weekly Schedule |Unay Şenocak|4|Sprint 2|
+| M4: Tasks |Asel Ece Birlikbaş|5|Sprint 2|
 | M5: Specialist entries| |4|Sprint 3|
 | M6: Documents | |4|Sprint 3|
-| M7: Weekly statics | |4| Sprint 3|
+| M7: Weekly statistics | |4| Sprint 3|
 | M8: Role-based AI summary | |5|Sprint 3|
 
 ### Sprint Plan
 
-> One row per Jira sprint. Align sprints with the weekly schedule.
+
 
 | Sprint | Weeks | Sprint goal | Ends with |
 |---|---|---|---|
@@ -69,14 +65,22 @@
 
 ## PMP-3. Progress Review: Mid-term (v0.1)
 
-**Jira board screenshot:**  
+**Jira board screenshot:**
+![Jira board v0.1](img/jira-v0.1.png)
 
 | Epic | Planned for this point | Status (Done / In progress / Not started) |
 |---|---|---|
-| | | |
-| | | |
+|M1|Yes|Done|
+|M2|Yes|Done|
+|M3|Yes|Done|
+|M4|Yes|Done|
+|M5|No|Not Started|
+|M6|No|Not Started|
+|M7|No|Not Started|
+|M8|No|Not Started|
 
-**Changes to the plan (if any):**
+
+**Changes to the plan (if any):**No changes
 
 ---
 
