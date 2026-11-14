@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { apiFetch } from '../api'
 
-// Loads events of a child for a given week (GET /api/children/:childId/events?week=YYYY-MM-DD).
+// Loads events of a child (GET /api/children/:childId/events, optionally filtered by ?week=YYYY-MM-DD).
 // Change `refreshKey` to force re-fetch.
-export function useEvents(childId, week, refreshKey = 0) {
+export function useEvents(childId, week = null, refreshKey = 0) {
   const [result, setResult] = useState({
     childId: null,
     week: null,
@@ -13,9 +13,10 @@ export function useEvents(childId, week, refreshKey = 0) {
   })
 
   useEffect(() => {
-    if (childId === null || !week) return undefined
+    if (childId === null) return undefined
     let active = true
-    apiFetch(`/api/children/${childId}/events?week=${week}`)
+    const query = week ? `?week=${week}` : ''
+    apiFetch(`/api/children/${childId}/events${query}`)
       .then((data) => {
         if (active) setResult({ childId, week, refreshKey, events: data.events, error: null })
       })
@@ -31,6 +32,6 @@ export function useEvents(childId, week, refreshKey = 0) {
   return {
     events: isCurrent ? result.events : [],
     error: isCurrent ? result.error : null,
-    loading: childId !== null && !!week && (!isCurrent || result.refreshKey !== refreshKey),
+    loading: childId !== null && (!isCurrent || result.refreshKey !== refreshKey),
   }
 }

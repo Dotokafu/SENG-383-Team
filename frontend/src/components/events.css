@@ -252,3 +252,104 @@
   gap: 8px;
   margin-top: 8px;
 }
+
+/* Child Schedule View (Upcoming Events - Read-Only, FR-M3-02 & FR-M3-04) */
+.child-events-panel {
+  text-align: left;
+  max-width: 880px;
+  margin: 24px auto;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.child-events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.child-events-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.child-events-header .inline-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.no-upcoming-events {
+  color: var(--text);
+  opacity: 0.75;
+  margin: 8px 0;
+}
+
+.child-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.child-event-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--text);
+  border-radius: 6px;
+}
+
+.child-event-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.child-event-title {
+  color: var(--text-h);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.child-event-by {
+  color: var(--text);
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.child-event-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.child-event-date {
+  color: var(--text-h);
+}
+
+.child-event-time {
+  color: var(--text);
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+}
+
